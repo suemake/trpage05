@@ -1,0 +1,10 @@
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    margin: -1px;
+    /* 
+    웹접근성 코딩, IR기법이라함. 위에 쓴건 네이버. 시각장애인을 위함, 화면에는 안 보이지만 시각장애인들은 읽을 수 있음 */
+}
