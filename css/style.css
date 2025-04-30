@@ -12,10 +12,13 @@
 }
 
 #header {
+    background: var(--white-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
 
     z-index: 999;
 
@@ -29,11 +32,22 @@
 
 
 #header .hd_wrap {
+    position: relative;
+    margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 64px;
 
 
+}
+
+#header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
 #header h1 a {
@@ -41,7 +55,8 @@
 }
 
 #header h1 a img {
-    height: 36px;
+    height: 40px;
+    display: block;
 }
 
 #header h1 a img:nth-child(1) {
@@ -61,12 +76,54 @@
     display: block;
 }
 
+#header .utils {
+    position: absolute;
+    right: 30px;
+    top: 0%;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
 
+#header .utils a {
+    font-size: 12px;
+    margin-left: 20px;
+    position: relative;
+    color: var(--textp-color);
+}
+
+#header.on .utils a {
+    color: var(--body-color);
+}
+
+#header .utils a~a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 2px;
+    background: var(--white-color);
+
+    transform: translate(0, -50%);
+}
+
+#header.on .utils a~a::before {
+    background: var(--body-color);
+}
 
 /* gnb */
 
+
+
 #header .gnb>ul {
+    max-width: 1410px;
+    margin: 0 auto;
     display: flex;
+    
+    justify-content: center;
+   
     gap: 40px;
 }
 
@@ -76,9 +133,10 @@
 
 #header .gnb>ul>li>a {
     display: block;
-    line-height: 120px;
-    font-size: 18px;
-    color: var(--white-color);
+    line-height: 80px;
+    font-size: 16px;
+    color: var(--body-color);
+    font-weight: 500;
 
     transition: line-height 0.4s;
 }
@@ -126,37 +184,10 @@
     line-height: 40px;
     padding: 0 40px;
     text-align: center;
+    color: #555
 }
 
-#header .utils {
-    display: flex;
-    gap: 24px;
-}
 
-#header .utils a {
-    position: relative;
-    color: var(--white-color);
-}
-
-#header.on .utils a {
-    color: var(--body-color);
-}
-
-#header .utils a~a::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -13px;
-    width: 2px;
-    height: 2px;
-    background: var(--white-color);
-
-    transform: translate(0, -50%);
-}
-
-#header.on .utils a~a::before {
-    background: var(--body-color);
-}
 
 .main_sec01 {
     position: relative;
@@ -191,7 +222,7 @@
 .main_sec01 .arrows {
     position: absolute;
     top: 50%;
-    left: 50%;
+    /* left: 50%; */
     transform: translate(-50%, -50%);
 
     max-width: 1410px;
