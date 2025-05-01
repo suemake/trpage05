@@ -1,6 +1,8 @@
 :root {
     --primary-color: #f8cd01;
+    --sub-color:#f9f0d2;
     --secondary-color: #eb6001;
+    --tird-color:
 
     --body-color: #333333;
 
@@ -188,7 +190,7 @@
 
 .main_sec01 {
     position: relative;
-    background: var(--background-color);
+    background: var(--sub-color);
     padding: 60px 0;
 }
 
@@ -221,14 +223,83 @@
     background: url(../images/main_visual04.jpg) no-repeat center center/cover;
 }
 
-.main_sec01 .main_sec01_slide .itm05 {
+/* .main_sec01 .main_sec01_slide .itm05 {
     background: url(../images/main_visual05.jpg) no-repeat center center/cover;
+} */
+
+
+.main_sec01 .lnk_wrap{
+    position: absolute;
+    left: 50%;
+
+    z-index: 2;
+    
+    transform: translate(-50%, 0);
+    max-width: 1410px;
+    width: 100%;
+}
+
+
+.main_sec01 .lnk_wrap .lnk_a{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    background: var(--secondary-color);
+    color: var(--white-color);
+
+    font-size: 16px;
+    line-height: 24px;
+    transform: translate(0, -50%);
+}
+
+.main_sec01 .lnk_wrap .lnk_a img{
+    content: "";
+    height: 32px;
+    margin-bottom: 16px;
+
+}
+
+.main_sec01 .lnk_wrap .lnk_a::before{
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0 ;
+    z-index: -1;
+    border-radius: 50%;
+    background: var(--secondary-color);
+
+    opacity: 0.25;
+}
+
+.main_sec01 .lnk_wrap .lnk_a:hover::before{
+    animation: circle 0.8s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 .main_sec01 .arrows {
     position: absolute;
     top: 50%;
-    /* left: 50%; */
+    left: 50%;
     transform: translate(-50%, -50%);
 
     max-width: 1410px;
@@ -237,23 +308,79 @@
 
 .main_sec01 .arrows button{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     background: #fff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 
 .main_sec01 .arrows .prev {
-    left: 0;
+    left: 0px;
+    transform: translate(-50%, -50%);
 }
 
 .main_sec01 .arrows .next {
-    right: 0;
+    right: 0px;
+    transform: translate(50%, -50%);
+}
+
+.main_sec01 .scroll{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+
+    transform: translate(-50%, 0);
+
+    font-size: 12px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.main_sec01 .scroll::before{
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 4px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+
+    animation: scroll 2s infinite;
+}
+
+.main_sec01 .scroll::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 1px;
+    height: 60px;
+    background: var(--white-color);
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 60px);
+    }
+
+    100% {
+        transform: translate(-50%, 60px) scale(12);
+        opacity: 0;
+    }
 }
 
 
@@ -332,7 +459,7 @@
 
 
 .main_sec03 .inner .left {
-    /* background: var(--background-color); */
+    background: var(--background-color);
     padding: 48px;
     border-radius: 24px;
     width: 480px;
@@ -367,4 +494,44 @@
 
 .main_sec03 .inner .right {
     padding: 96px;
+}
+
+
+.main_sec04{
+    /* max-width: 1410px; */
+}
+
+.main_sec04 .e_inner{
+    display: flex;
+}
+
+
+.main_sec04 .main_sec04_slide .itm{
+    padding: 48px;
+    background: var(--background-color);
+    border-radius: 32px;
+}
+
+.main_sec04 .main_sec04_slide .itm figure{
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.main_sec04 .main_sec04_slide .itm img{
+    width: 100%;
+}
+
+.main_sec04 .main_sec04_slide .itm strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

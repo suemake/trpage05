@@ -3,6 +3,14 @@
     margin: 0 auto;
 }
 
+.e_inner {
+    max-width: calc((100% - 141rem)/2 + 141rem);
+}
+
+.e_inner.c {
+    margin-left: auto;
+}
+
 .default {
     padding: 120px 0;
 }
