@@ -61,9 +61,10 @@ $(document).ready(function () {
   });
 });
 
-$(function () {
+//
 
-  const main_customer_slide = new Swiper('.main_sec04_slide', {
+$(function () {
+  const main_sec04_slide = new Swiper('.main_sec04_slide', {
       loop: true,
       slidesPerView: 2.5,
       spaceBetween: 30,
@@ -74,16 +75,16 @@ $(function () {
   });
 
   $('.main_sec04 .next').on('click', function () {
-      main_sec04_slide.slideNext();
+    main_sec04_slide.slideNext();
   });
 
   let sw = true;
   $('.main_sec04 .play').on('click', function () {
       if (sw) {
-          main_sec04_slide.autoplay.start();
+        main_sec04_slide.autoplay.start();
           $(this).addClass('on');
       } else {
-          main_sec04_slide.autoplay.pause();
+        main_sec04_slide.autoplay.pause();
           $(this).removeClass('on');
       }
 
@@ -92,6 +93,9 @@ $(function () {
 
 });
 
+
+
+//
 $(function () {
   $(window).on('scroll', function () {
       let sct = $(window).scrollTop();
