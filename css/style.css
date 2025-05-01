@@ -14,11 +14,8 @@
 #header {
     background: var(--white-color);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
 
     z-index: 999;
 
@@ -191,12 +188,21 @@
 
 .main_sec01 {
     position: relative;
+    background: var(--background-color);
+    padding: 60px 0;
+}
+
+.main_sec01 .main_sec01_slide{
+    max-width: 1410px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    
 }
 
 .main_sec01 .main_sec01_slide .itm {
     position: relative;
-    height: 100vh;
-    /* overflow: hidden; */
+    height: 480px;
 }
 
 .main_sec01 .main_sec01_slide .itm01 {
@@ -227,6 +233,18 @@
 
     max-width: 1410px;
     width: 100%;
+}
+
+.main_sec01 .arrows button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 
